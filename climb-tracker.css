@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* --- LOGIN PAGE - MOBILE --- */
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.sign_up,
+.login {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+
+.sign_up {
+  opacity: .5;
+}
+
+.sign_up--display,
+.login--display {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sign_up--heading,
+.login--heading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sign_up--h1,
+.login--h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#sign_up--form,
+#login--form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#sign_up--form input[type='text'],
+#sign_up--form input[type='email'],
+#sign_up--form input[type='password'],
+#login--form input[type='text'],
+#login--form input[type='email'],
+#login--form input[type='password'] {
+  margin: 5px 0;
+  padding: 10px 5px;
+  border: 2px solid black;
+}
+
+.submit_container,
+.login_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#sign_up_submit,
+#login_submit {
+  width: 150px;
+  height: 40px;
+  background-color: lightseagreen;
+  border: none;
+  border-radius: 20px;
+}
+
+.login--returning_user,
+.login--new_user {
+  text-align: center;
+  margin: 20px;
+}
+
+.login--returning_user p,
+.login--new_user p {
+  font-size: 1rem;
+}
+
+.login--link,
+.login--sign_up--link {
+  color: coral;
+  font-weight: 700;
+}
+
+.toBottom {
+  animation: mobile_toBottom 2s 1 forwards;
+}
+
+.animate-2 {
+    animation: mobile_fromTop 2s 1 forwards;
+}
+
+/* --- KEYFRAMES --- */
+
+@keyframes mobile_toBottom {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+    z-index: 0;
+  }
+  100% {
+    transform: translate(0%, 100%);
+    opacity: 0;
+    z-index: 1;
+  }
+}
+
+
+@keyframes mobile_fromTop {
+    0% {
+        transform: translate(0%, -200%);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(0%, -100%);
+        opacity: 1;
+      }
+    }
+}
