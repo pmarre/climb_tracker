@@ -16,7 +16,9 @@
         // require header
     ?> 
 <section class="login">
+<div class="login-background_color">
     <div class="container login--display">
+   
         <div class="login--heading">
             <h1 class="login--h1">Welcome Back, Sendy McSenderson</h1>
             <p>What did you send today?</p>
@@ -32,9 +34,12 @@
         <p>New to Climb Tracker? <a class="login--sign_up--link"  href="#">Sign Up Here</a></p>
     </div>
 </div>
+</div>
 </section>
 <section class="sign_up">
+<div class="sign_up-background_color">
     <div class="container sign_up--display">
+        
         <div class="sign_up--heading">
             <h1 class="sign_up--h1">Join Climb Tracker Now!</h1>
             <p>Never forget a climb.</p>
@@ -52,6 +57,7 @@
     <div class="login--returning_user">
         <p>Already have a login? <a class="login--link" href="#">Log in here.</a></p>
     </div>
+</div>
 </div>
 </section>
     <?php 
