@@ -14,15 +14,19 @@
 <body>
     <?php 
         // require header
+        include '../php_connect.php';
+        $conn = OpenCon();
+        echo "Connected Successfully";
+        CloseCon($conn);
     ?> 
 <section class="profile">
     <div class="container profile--container">
         <div class="profile-heading">
-            <h1>Welcome back, <?php $fname ?>fname!<h1>
+            <h1>Welcome back, <?php $fname ?>[first name]!<h1>
 </div>
         <aside class="side-menu">
             <ul>
-                <li>menu item</li>
+                <li>Add a climb</li>
                 <li>menu item</li>   
                 <li>menu item</li>   
                 <li>menu item</li>   
@@ -31,9 +35,18 @@
             <div class="chart">
 </div>
 <div class="details--container">
-    <div class="total_pitches"></div>
-    <div class="average_grade"></div>
-    <div class="highest_grade"></div>
+    <div class="total_pitches">
+        <h3>Total Pitches</h3>
+        <span>129</span>
+    </div>
+    <div class="average_grade">
+    <h3>Average Grade</h3>
+        <span>5.10c</span>
+    </div>
+    <div class="highest_grade">
+    <h3>Highest Grade</h3>
+        <span>5.11c</span>
+    </div>
 </div>
 </div>
 </section>

@@ -227,6 +227,9 @@ body {
   }
 
   /* --- PROFILE PAGE --- */
+  .profile {
+    width: 100%;
+  }
 
   .profile--container {
     display: grid;
@@ -238,23 +241,24 @@ body {
   }
 
   .profile-heading {
-    grid-column: 1 / 11;
+    grid-column: 2 / 10;
+    grid-row: 1 / 2;
   }
 
   .side-menu {
-    grid-column: 1 / 3;
+    grid-column: 2 / 3;
     grid-row: 2 / 7;
     background-color: coral;
   }
 
   .chart {
-    grid-column: 3 / 11;
+    grid-column: 3 / 10;
     grid-row: 2 / 7;
     background-color: coral;
   }
   .details--container {
-    grid-column: 3 / 11;
-    grid-row: 7 / 8;
+    grid-column: 3 / 10;
+    grid-row: 7 / 9;
     display: flex;
     justify-content: space-between;
   }
@@ -264,6 +268,28 @@ body {
     width: 30%;
 
     background-color: coral;
+  }
+
+  .total_pitches,
+  .average_grade,
+  .highest_grade {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    text-align: center;
+  }
+
+  .total_pitches h3,
+  .average_grade h3,
+  .highest_grade h3 {
+    font-size: 1.125rem;
+  }
+
+  .total_pitches span,
+  .average_grade span,
+  .highest_grade span {
+    font-size: 3rem;
   }
 }
 

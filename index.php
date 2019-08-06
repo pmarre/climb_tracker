@@ -14,6 +14,22 @@
 <body>
     <?php 
         // require header
+        include 'php_connect.php';
+        $conn = OpenCon();
+        
+
+
+
+        $query = "INSERT INTO login_info(FirstName, LastName, Email, Password) VALUES ('$POST[sign_up_fname]', '$POST[sign_up_lname]', '$POST[sign_up_email]', '$POST[sign_up_password]')";
+
+        if ($db->query($query) === true) {
+            echo '<div>FORM SUBMITTED</div>';
+        } 
+        else {
+            echo '<div>ERROR: ' . $db->error . '</div>';
+        }
+
+        CloseCon($conn);
     ?> 
 <section class="login">
 <div class="login-background_color">
@@ -23,7 +39,7 @@
             <h1 class="login--h1">Welcome Back, Sendy McSenderson</h1>
             <p>What did you send today?</p>
 </div>
-    <form method="POST" action="#" id="login--form">
+    <form method="POST" action="index.php" id="login--form">
         <input type="email" name="login_email" id="login_email" placeholder="youremail@email.com">
         <input type="password" name="login_password" id="login_password" placeholder="Password">
         <div class="login_container">
@@ -44,7 +60,7 @@
             <h1 class="sign_up--h1">Join Climb Tracker Now!</h1>
             <p>Never forget a climb.</p>
 </div>
-    <form method="POST" action="#" id="sign_up--form">
+    <form method="POST" action="index.php" id="sign_up--form">
         <input type="text" name="sign_up_fname" id="sign_up_fname" placeholder="First name">
         <input type="text" name="sign_up_lname" id="sign_up_lname" placeholder="Last name">
         <input type="email" name="sign_up_email" id="sign_up_email" placeholder="youremail@email.com">
